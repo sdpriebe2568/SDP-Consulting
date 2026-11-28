@@ -175,18 +175,18 @@
                     <a href="#services" class="hover:text-[#e58339] transition-colors">Practice Pillars</a>
                     <a href="#impact" class="hover:text-[#e58339] transition-colors">Case Studies</a>
                     <a href="#credentials" class="hover:text-[#e58339] transition-colors">Clearance &amp; Certs</a>
-                    <a href="#blog" class="hover:text-[#e58339] transition-colors flex items-center gap-1.5"><i class="fa-solid fa-newspaper text-[#e58339] text-xs"></i>Insights &amp; Blog</a>
+                    <a href="#blog" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#3d190d]/85 border border-[#e58339]/50 text-white font-semibold hover:bg-[#3d190d] hover:border-[#e58339] transition-all">
+                        <i class="fa-solid fa-newspaper text-[#e58339] text-xs"></i>
+                        <span>Insights &amp; Blog</span>
+                        <span class="px-1.5 py-0.5 text-[10px] font-mono font-bold rounded bg-[#e58339] text-white leading-none">6</span>
+                    </a>
                     <a href="#estimator" class="hover:text-[#e58339] transition-colors">Scope Estimator</a>
                     <a href="#about" class="hover:text-[#e58339] transition-colors">Principal Bio</a>
                 </nav>
 
-                <!-- Action Buttons -->
+                <!-- Primary Action Button -->
                 <div class="hidden md:flex items-center space-x-3">
-                    <button onclick="toggleGitHubModal(true)" class="inline-flex items-center px-3.5 py-2 rounded-xl text-xs font-semibold bg-[#3d190d]/80 hover:bg-[#3d190d] text-white border border-[#e58339]/40 transition-all">
-                        <i class="fa-brands fa-github text-sm mr-2 text-[#e58339]"></i>
-                        Deploy to GitHub
-                    </button>
-                    <a href="#estimator" class="inline-flex items-center px-4 py-2.5 rounded-xl text-sm font-bold bg-[#e58339] hover:bg-[#f09248] text-white shadow-lg shadow-black/25 transition-all">
+                    <a href="#estimator" class="inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-bold bg-[#e58339] hover:bg-[#f09248] text-white shadow-lg shadow-black/25 transition-all">
                         <span>Book Discovery Call</span>
                         <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
@@ -194,9 +194,10 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="flex lg:hidden items-center space-x-2">
-                    <button onclick="toggleGitHubModal(true)" class="p-2.5 rounded-xl bg-[#3d190d] text-[#e58339] border border-[#e58339]/40" title="Deploy to GitHub">
-                        <i class="fa-brands fa-github text-lg"></i>
-                    </button>
+                    <a href="#blog" class="px-3 py-2 rounded-xl bg-[#3d190d] text-white text-xs font-bold border border-[#e58339]/50 flex items-center gap-1.5">
+                        <i class="fa-solid fa-newspaper text-[#e58339]"></i>
+                        <span>Blog</span>
+                    </a>
                     <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2.5 rounded-xl bg-[#3d190d] text-white hover:text-[#e58339] border border-[#e58339]/40 focus:outline-none">
                         <i id="mobile-menu-icon" class="fa-solid fa-bars text-lg"></i>
                     </button>
@@ -209,14 +210,14 @@
             <a href="#services" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Practice Pillars</a>
             <a href="#impact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Client Impact &amp; Case Studies</a>
             <a href="#credentials" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Security Clearance &amp; Certs</a>
-            <a href="#blog" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Insights &amp; Technical Blog</a>
+            <a href="#blog" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3 py-2.5 rounded-lg text-base font-bold text-white bg-[#3d190d] border border-[#e58339]/50">
+                <span><i class="fa-solid fa-newspaper text-[#e58339] mr-2"></i>Insights &amp; Technical Blog</span>
+                <span class="px-2 py-0.5 text-xs font-mono rounded bg-[#e58339] text-white">6 Briefs</span>
+            </a>
             <a href="#estimator" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Project Scope &amp; ROI Estimator</a>
             <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">About Scott D. Priebe</a>
-            <div class="pt-2 flex flex-col space-y-2">
-                <button onclick="toggleGitHubModal(true); toggleMobileMenu();" class="w-full py-2.5 rounded-xl text-sm font-semibold bg-[#3d190d] text-white border border-[#e58339]/40 flex items-center justify-center">
-                    <i class="fa-brands fa-github mr-2 text-[#e58339]"></i> GitHub Repo &amp; Logo Assets Guide
-                </button>
-                <a href="#estimator" onclick="toggleMobileMenu()" class="w-full py-2.5 rounded-xl text-sm font-bold bg-[#e58339] text-white text-center shadow-lg">
+            <div class="pt-2">
+                <a href="#estimator" onclick="toggleMobileMenu()" class="w-full py-2.5 rounded-xl text-sm font-bold bg-[#e58339] text-white text-center shadow-lg block">
                     Book Discovery Call
                 </a>
             </div>
@@ -974,9 +975,12 @@
 
             <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-white/65">
                 <div>© 2026 SDP Consulting LLC • Scott D. Priebe, Principal • Active DoD Secret Clearance</div>
-                <button onclick="toggleGitHubModal(true)" class="text-[#e58339] font-semibold hover:underline flex items-center">
-                    <i class="fa-brands fa-github mr-1.5"></i> Deploy Website &amp; Logo Files to GitHub
-                </button>
+                <div class="flex flex-wrap items-center gap-4 text-xs">
+                    <a href="#services" class="hover:text-[#e58339] transition-colors">Practice Pillars</a>
+                    <a href="#impact" class="hover:text-[#e58339] transition-colors">Case Studies</a>
+                    <a href="#blog" class="text-[#e58339] font-semibold hover:underline">Insights &amp; Blog</a>
+                    <a href="#estimator" class="hover:text-[#e58339] transition-colors">Book Discovery Call</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -1013,51 +1017,6 @@
         </div>
     </div>
 
-    <!-- GITHUB DEPLOYMENT & LOGO ASSETS MODAL -->
-    <div id="github-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-[#6b2e1a] border-2 border-[#e58339] rounded-2xl max-w-2xl w-full p-6 sm:p-8 text-white shadow-2xl relative max-h-[90vh] overflow-y-auto">
-            <button onclick="toggleGitHubModal(false)" class="absolute top-5 right-5 w-9 h-9 rounded-lg bg-[#3d190d] text-white/80 hover:text-[#e58339] flex items-center justify-center">
-                <i class="fa-solid fa-xmark text-lg"></i>
-            </button>
-
-            <div class="flex items-center space-x-3 mb-4">
-                <div class="w-10 h-10 rounded-xl bg-[#e58339] text-white flex items-center justify-center text-xl">
-                    <i class="fa-brands fa-github"></i>
-                </div>
-                <div>
-                    <h3 class="font-brand text-xl font-bold">Deploy Website &amp; Looka Logo Assets to GitHub</h3>
-                    <p class="text-xs text-[#f5b482]">Target Repository: <code class="text-white">https://github.com/sdpriebe2568/SDP-Consulting</code></p>
-                </div>
-            </div>
-
-            <p class="text-xs sm:text-sm text-white/90 leading-relaxed mb-4">
-                Save this single-file site as <code class="px-1.5 py-0.5 rounded bg-[#3d190d] text-[#f5b482] font-mono">index.html</code> inside your repository folder, copy your Looka logo assets from <code class="px-1.5 py-0.5 rounded bg-[#3d190d] text-white font-mono">C:\Users\prieb\Documents\SDPConsultingLLC\Logo Files</code> into an <code class="px-1.5 py-0.5 rounded bg-[#3d190d] text-[#f5b482] font-mono">assets/</code> subfolder, and run these PowerShell commands:
-            </p>
-
-            <div class="bg-[#3d190d] border border-[#e58339]/40 rounded-xl p-4 font-mono text-xs text-white/95 overflow-x-auto relative">
-                <button onclick="copyGitCommands()" class="absolute top-3 right-3 px-2.5 py-1 rounded bg-[#e58339] hover:bg-[#f09248] text-white text-[11px] font-sans font-bold flex items-center">
-                    <i class="fa-regular fa-copy mr-1.5"></i> <span id="copy-git-label">Copy Commands</span>
-                </button>
-<pre id="git-commands" class="leading-relaxed">cd "C:\Users\prieb\Documents\SDPConsultingLLC"
-mkdir assets -Force
-Copy-Item "C:\Users\prieb\Documents\SDPConsultingLLC\Logo Files\*" -Destination ".\assets\" -Recurse -Force
-git init
-git branch -M main
-git remote add origin https://github.com/sdpriebe2568/SDP-Consulting.git
-git add index.html assets/
-git commit -m "Deploy SDP Consulting LLC branded website and Looka logo assets"
-git push -u origin main</pre>
-            </div>
-
-            <div class="mt-5 p-4 rounded-xl bg-[#3d190d]/85 border border-white/15 text-xs text-white/85 space-y-1.5">
-                <div class="font-bold text-white flex items-center"><i class="fa-solid fa-circle-info text-[#e58339] mr-2"></i>Publish Live on GitHub Pages:</div>
-                <p>1. Open <a href="https://github.com/sdpriebe2568/SDP-Consulting/settings/pages" target="_blank" class="text-[#e58339] underline">github.com/sdpriebe2568/SDP-Consulting/settings/pages</a>.</p>
-                <p>2. Under <strong>Build and deployment → Source</strong>, choose <strong>Deploy from a branch</strong>.</p>
-                <p>3. Select branch <strong>main</strong> and folder <strong>/ (root)</strong>, then click <strong>Save</strong>.</p>
-            </div>
-        </div>
-    </div>
-
     <!-- APPLICATION SCRIPTS -->
     <script>
         // Toggle Mobile Navigation Menu
@@ -1066,16 +1025,6 @@ git push -u origin main</pre>
             const icon = document.getElementById('mobile-menu-icon');
             menu.classList.toggle('hidden');
             icon.className = menu.classList.contains('hidden') ? 'fa-solid fa-bars text-lg' : 'fa-solid fa-xmark text-lg';
-        }
-
-        // Toggle GitHub Modal
-        function toggleGitHubModal(show) {
-            const modal = document.getElementById('github-modal');
-            if (show) {
-                modal.classList.remove('hidden');
-            } else {
-                modal.classList.add('hidden');
-            }
         }
 
         // Blog Articles Data & Modal Handlers
@@ -1311,21 +1260,6 @@ git push -u origin main</pre>
             const feedback = document.getElementById('scope-feedback');
             feedback.classList.remove('hidden');
             feedback.innerHTML = `<strong class="text-white"><i class="fa-solid fa-clipboard-check text-[#e58339] mr-1.5"></i>Copied to Clipboard!</strong> Your formatted project scope brief is ready to paste into an email or message to <strong class="text-white">priebesd@gmail.com</strong>.`;
-        }
-
-        // Copy Git Commands in Modal
-        function copyGitCommands() {
-            const commands = document.getElementById('git-commands').innerText;
-            const tempTextArea = document.createElement('textarea');
-            tempTextArea.value = commands;
-            document.body.appendChild(tempTextArea);
-            tempTextArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempTextArea);
-
-            const label = document.getElementById('copy-git-label');
-            label.innerText = 'Copied!';
-            setTimeout(() => { label.innerText = 'Copy Commands'; }, 2200);
         }
 
         // Initialize Estimator on Load
