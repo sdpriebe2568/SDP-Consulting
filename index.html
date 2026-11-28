@@ -133,15 +133,15 @@
     <!-- Sticky Brand Navigation Header -->
     <header class="sticky top-0 z-40 bg-[#6b2e1a]/95 backdrop-blur-md border-b border-[#e58339]/30 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-20 gap-6 xl:gap-8">
                 
-                <!-- Official Brand Logo from assets/noBgWhite.png with Inline SVG Fallback -->
-                <a href="#" class="flex items-center space-x-2.5 group focus:outline-none">
-                    <img src="assets/noBgWhite.png" alt="SDP Consulting LLC" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-                    <span class="hidden flex items-center space-x-2.5">
-                        <span class="font-brand font-black text-lg sm:text-xl tracking-wider text-white">SDP CONSULTING</span>
+                <!-- Official Brand Logo from assets/noBgWhite.png with Inline SVG Fallback (Single-Line Lockup) -->
+                <a href="#" class="shrink-0 whitespace-nowrap flex items-center space-x-2 group focus:outline-none">
+                    <img src="assets/noBgWhite.png" alt="SDP Consulting LLC" class="h-9 xl:h-10 w-auto object-contain shrink-0 transition-transform duration-300 group-hover:scale-[1.02]" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                    <span class="hidden shrink-0 whitespace-nowrap flex items-center space-x-2">
+                        <span class="font-brand font-black text-base xl:text-lg tracking-wider text-white whitespace-nowrap">SDP CONSULTING</span>
                         <!-- Exact Vector Circuit-Brain Symbol from symbol.svg (#e58339) -->
-                        <svg class="w-9 h-9 sm:w-10 sm:h-10 shrink-0 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 120 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="SDP Consulting Circuit Brain Emblem">
+                        <svg class="h-7 xl:h-8 w-auto shrink-0 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 120 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="SDP Consulting Circuit Brain Emblem">
                             <path d="M54 14C42 14 33 22 32 33C21 33 13 42 13 53C13 59 16 64 20 68C16 72 13 77 13 83C13 94 22 102 33 102C34 102 35 102 36 101.8C39 109 46 114 54 114V14Z" transform="translate(0 -9)" stroke="#e58339" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M66 14C78 14 87 22 88 33C99 33 107 42 107 53C107 59 104 64 100 68C104 72 107 77 107 83C107 94 98 102 87 102C86 102 85 102 84 101.8C81 109 74 114 66 114V14Z" transform="translate(0 -9)" stroke="#e58339" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M40 24H47V38" stroke="#e58339" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -166,35 +166,35 @@
                             <path d="M76 92H82V72" stroke="#e58339" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
                             <rect x="69" y="88.5" width="7" height="7" stroke="#e58339" stroke-width="3.2"/>
                         </svg>
-                        <span class="font-brand font-black text-lg sm:text-xl tracking-wider text-white">LLC</span>
+                        <span class="font-brand font-black text-base xl:text-lg tracking-wider text-white whitespace-nowrap">LLC</span>
                     </span>
                 </a>
 
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-white/90">
-                    <a href="#services" class="hover:text-[#e58339] transition-colors">Practice Pillars</a>
-                    <a href="#impact" class="hover:text-[#e58339] transition-colors">Case Studies</a>
-                    <a href="#credentials" class="hover:text-[#e58339] transition-colors">Clearance &amp; Certs</a>
-                    <a href="#blog" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#3d190d]/85 border border-[#e58339]/50 text-white font-semibold hover:bg-[#3d190d] hover:border-[#e58339] transition-all">
+                <!-- Desktop Navigation Links (Single-Line Whitespace-Nowrap) -->
+                <nav class="hidden lg:flex items-center space-x-4 xl:space-x-6 text-sm font-medium text-white/90">
+                    <a href="#services" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Solutions</a>
+                    <a href="#impact" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Case Studies</a>
+                    <a href="#credentials" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Clearance</a>
+                    <a href="#blog" class="whitespace-nowrap inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#3d190d]/85 border border-[#e58339]/50 text-white font-semibold hover:bg-[#3d190d] hover:border-[#e58339] transition-all">
                         <i class="fa-solid fa-newspaper text-[#e58339] text-xs"></i>
-                        <span>Insights &amp; Blog</span>
+                        <span class="whitespace-nowrap">Insights &amp; Blog</span>
                         <span class="px-1.5 py-0.5 text-[10px] font-mono font-bold rounded bg-[#e58339] text-white leading-none">6</span>
                     </a>
-                    <a href="#estimator" class="hover:text-[#e58339] transition-colors">Scope Estimator</a>
-                    <a href="#about" class="hover:text-[#e58339] transition-colors">Principal Bio</a>
+                    <a href="#estimator" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Estimator</a>
+                    <a href="#about" class="whitespace-nowrap hover:text-[#e58339] transition-colors">About</a>
                 </nav>
 
                 <!-- Primary Action Button -->
-                <div class="hidden md:flex items-center space-x-3">
-                    <a href="#estimator" class="inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-bold bg-[#e58339] hover:bg-[#f09248] text-white shadow-lg shadow-black/25 transition-all">
-                        <span>Book Discovery Call</span>
+                <div class="hidden lg:flex items-center shrink-0">
+                    <a href="#estimator" class="whitespace-nowrap shrink-0 inline-flex items-center px-4 xl:px-5 py-2.5 rounded-xl text-sm font-bold bg-[#e58339] hover:bg-[#f09248] text-white shadow-lg shadow-black/25 transition-all">
+                        <span class="whitespace-nowrap">Book Discovery Call</span>
                         <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="flex lg:hidden items-center space-x-2">
-                    <a href="#blog" class="px-3 py-2 rounded-xl bg-[#3d190d] text-white text-xs font-bold border border-[#e58339]/50 flex items-center gap-1.5">
+                <div class="flex lg:hidden items-center space-x-2 shrink-0">
+                    <a href="#blog" class="whitespace-nowrap px-3 py-2 rounded-xl bg-[#3d190d] text-white text-xs font-bold border border-[#e58339]/50 flex items-center gap-1.5">
                         <i class="fa-solid fa-newspaper text-[#e58339]"></i>
                         <span>Blog</span>
                     </a>
@@ -234,10 +234,10 @@
             <div class="mb-12 p-6 sm:p-8 rounded-2xl bg-[#6b2e1a]/90 border border-[#e58339]/45 shadow-2xl text-center relative overflow-hidden">
                 <img src="assets/noBgWhite.png" alt="SDP Consulting LLC — Elevate the Power of Your Business with the Power Platform" class="mx-auto max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden">
-                    <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-5">
-                        <span class="font-brand font-black text-2xl sm:text-4xl lg:text-5xl tracking-[0.06em] text-white">SDP CONSULTING</span>
-                        <!-- Exact Circuit-Brain Icon in #e58339 -->
-                        <svg class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 shrink-0" viewBox="0 0 120 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+                        <span class="font-brand font-black text-2xl sm:text-4xl lg:text-5xl tracking-[0.06em] text-white leading-none">SDP CONSULTING</span>
+                        <!-- Exact Circuit-Brain Icon in #e58339 Aligned to Wordmark Cap-Height -->
+                        <svg class="h-12 md:h-16 w-auto shrink-0 block" viewBox="0 0 120 110" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M54 14C42 14 33 22 32 33C21 33 13 42 13 53C13 59 16 64 20 68C16 72 13 77 13 83C13 94 22 102 33 102C34 102 35 102 36 101.8C39 109 46 114 54 114V14Z" transform="translate(0 -9)" stroke="#e58339" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M66 14C78 14 87 22 88 33C99 33 107 42 107 53C107 59 104 64 100 68C104 72 107 77 107 83C107 94 98 102 87 102C86 102 85 102 84 101.8C81 109 74 114 66 114V14Z" transform="translate(0 -9)" stroke="#e58339" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M40 24H47V38" stroke="#e58339" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -262,7 +262,7 @@
                             <path d="M76 92H82V72" stroke="#e58339" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
                             <rect x="69" y="88.5" width="7" height="7" stroke="#e58339" stroke-width="3.2"/>
                         </svg>
-                        <span class="font-brand font-black text-2xl sm:text-4xl lg:text-5xl tracking-[0.06em] text-white">LLC</span>
+                        <span class="font-brand font-black text-2xl sm:text-4xl lg:text-5xl tracking-[0.06em] text-white leading-none">LLC</span>
                     </div>
                     <!-- Official Stencil Tagline -->
                     <p class="mt-4 font-stencil text-base sm:text-xl lg:text-2xl uppercase text-white tracking-[0.12em] leading-snug">
