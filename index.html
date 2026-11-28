@@ -172,21 +172,21 @@
 
                 <!-- Desktop Navigation Links (Single-Line Whitespace-Nowrap) -->
                 <nav class="hidden lg:flex items-center space-x-4 xl:space-x-6 text-sm font-medium text-white/90">
-                    <a href="#services" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Solutions</a>
-                    <a href="#impact" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Case Studies</a>
-                    <a href="#credentials" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Clearance</a>
-                    <a href="#blog" class="whitespace-nowrap inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#3d190d]/85 border border-[#e58339]/50 text-white font-semibold hover:bg-[#3d190d] hover:border-[#e58339] transition-all">
+                    <a href="#services" onclick="return navigateToSection('services', event)" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Solutions</a>
+                    <a href="#impact" onclick="return navigateToSection('impact', event)" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Case Studies</a>
+                    <a href="#credentials" onclick="return navigateToSection('credentials', event)" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Clearance</a>
+                    <a href="#blog" onclick="return navigateToSection('blog', event)" class="whitespace-nowrap inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#3d190d]/85 border border-[#e58339]/50 text-white font-semibold hover:bg-[#3d190d] hover:border-[#e58339] transition-all">
                         <i class="fa-solid fa-newspaper text-[#e58339] text-xs"></i>
                         <span class="whitespace-nowrap">Insights &amp; Blog</span>
                         <span class="px-1.5 py-0.5 text-[10px] font-mono font-bold rounded bg-[#e58339] text-white leading-none">6</span>
                     </a>
-                    <a href="#estimator" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Estimator</a>
-                    <a href="#about" class="whitespace-nowrap hover:text-[#e58339] transition-colors">About</a>
+                    <a href="#estimator" onclick="return navigateToSection('estimator', event)" class="whitespace-nowrap hover:text-[#e58339] transition-colors">Estimator</a>
+                    <a href="#about" onclick="return navigateToSection('about', event)" class="whitespace-nowrap hover:text-[#e58339] transition-colors">About</a>
                 </nav>
 
                 <!-- Primary Action Button -->
                 <div class="hidden lg:flex items-center shrink-0">
-                    <a href="#estimator" class="whitespace-nowrap shrink-0 inline-flex items-center px-4 xl:px-5 py-2.5 rounded-xl text-sm font-bold bg-[#e58339] hover:bg-[#f09248] text-white shadow-lg shadow-black/25 transition-all">
+                    <a href="#contact" onclick="return navigateToSection('contact', event)" class="whitespace-nowrap shrink-0 inline-flex items-center px-4 xl:px-5 py-2.5 rounded-xl text-sm font-bold bg-[#e58339] hover:bg-[#f09248] text-white shadow-lg shadow-black/25 transition-all">
                         <span class="whitespace-nowrap">Book Discovery Call</span>
                         <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
@@ -194,7 +194,7 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="flex lg:hidden items-center space-x-2 shrink-0">
-                    <a href="#blog" class="whitespace-nowrap px-3 py-2 rounded-xl bg-[#3d190d] text-white text-xs font-bold border border-[#e58339]/50 flex items-center gap-1.5">
+                    <a href="#blog" onclick="return navigateToSection('blog', event)" class="whitespace-nowrap px-3 py-2 rounded-xl bg-[#3d190d] text-white text-xs font-bold border border-[#e58339]/50 flex items-center gap-1.5">
                         <i class="fa-solid fa-newspaper text-[#e58339]"></i>
                         <span>Blog</span>
                     </a>
@@ -207,17 +207,17 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden lg:hidden bg-[#542313] border-b border-[#e58339]/30 px-4 pt-3 pb-6 space-y-2.5">
-            <a href="#services" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Practice Pillars</a>
-            <a href="#impact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Client Impact &amp; Case Studies</a>
-            <a href="#credentials" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Security Clearance &amp; Certs</a>
-            <a href="#blog" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3 py-2.5 rounded-lg text-base font-bold text-white bg-[#3d190d] border border-[#e58339]/50">
+            <a href="#services" onclick="toggleMobileMenu(); return navigateToSection('services', event)" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Solutions &amp; Practice Pillars</a>
+            <a href="#impact" onclick="toggleMobileMenu(); return navigateToSection('impact', event)" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Case Studies &amp; Client Impact</a>
+            <a href="#credentials" onclick="toggleMobileMenu(); return navigateToSection('credentials', event)" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Security Clearance &amp; Certs</a>
+            <a href="#blog" onclick="toggleMobileMenu(); return navigateToSection('blog', event)" class="flex items-center justify-between px-3 py-2.5 rounded-lg text-base font-bold text-white bg-[#3d190d] border border-[#e58339]/50">
                 <span><i class="fa-solid fa-newspaper text-[#e58339] mr-2"></i>Insights &amp; Technical Blog</span>
                 <span class="px-2 py-0.5 text-xs font-mono rounded bg-[#e58339] text-white">6 Briefs</span>
             </a>
-            <a href="#estimator" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Project Scope &amp; ROI Estimator</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">About Scott D. Priebe</a>
+            <a href="#estimator" onclick="toggleMobileMenu(); return navigateToSection('estimator', event)" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">Project Scope &amp; ROI Estimator</a>
+            <a href="#about" onclick="toggleMobileMenu(); return navigateToSection('about', event)" class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-[#3d190d]">About Scott D. Priebe</a>
             <div class="pt-2">
-                <a href="#estimator" onclick="toggleMobileMenu()" class="w-full py-2.5 rounded-xl text-sm font-bold bg-[#e58339] text-white text-center shadow-lg block">
+                <a href="#contact" onclick="toggleMobileMenu(); return navigateToSection('contact', event)" class="w-full py-2.5 rounded-xl text-sm font-bold bg-[#e58339] text-white text-center shadow-lg block">
                     Book Discovery Call
                 </a>
             </div>
@@ -293,15 +293,15 @@
 
                     <!-- Primary CTAs -->
                     <div class="flex flex-wrap items-center gap-4 pt-1">
-                        <a href="#estimator" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-base font-bold bg-[#e58339] hover:bg-[#f09248] text-white shadow-xl shadow-black/25 transition-all">
+                        <a href="#estimator" onclick="return navigateToSection('estimator', event)" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-base font-bold bg-[#e58339] hover:bg-[#f09248] text-white shadow-xl shadow-black/25 transition-all">
                             <span>Configure Your Project Scope</span>
                             <i class="fa-solid fa-sliders ml-2.5"></i>
                         </a>
-                        <a href="#impact" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-base font-semibold bg-[#3d190d]/80 hover:bg-[#3d190d] text-white border border-white/25 transition-all">
+                        <a href="#impact" onclick="return navigateToSection('impact', event)" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-base font-semibold bg-[#3d190d]/80 hover:bg-[#3d190d] text-white border border-white/25 transition-all">
                             <span>View Case Studies</span>
                             <i class="fa-solid fa-arrow-down ml-2.5 text-[#e58339]"></i>
                         </a>
-                        <a href="#blog" class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl text-base font-semibold bg-white/10 hover:bg-white/15 text-white border border-[#e58339]/40 transition-all">
+                        <a href="#blog" onclick="return navigateToSection('blog', event)" class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl text-base font-semibold bg-white/10 hover:bg-white/15 text-white border border-[#e58339]/40 transition-all">
                             <i class="fa-solid fa-newspaper mr-2 text-[#e58339]"></i>
                             <span>Read Technical Blog</span>
                         </a>
@@ -391,7 +391,7 @@
 
                         <div class="mt-5 pt-4 border-t border-white/15 flex items-center justify-between text-xs text-white/80">
                             <span>Yorkville, IL 60560 • Nationwide</span>
-                            <a href="#credentials" class="text-[#e58339] font-semibold hover:underline">15 MS Accreditations →</a>
+                            <a href="#credentials" onclick="return navigateToSection('credentials', event)" class="text-[#e58339] font-semibold hover:underline">15 MS Accreditations →</a>
                         </div>
                     </div>
                 </div>
@@ -425,8 +425,442 @@
         </div>
     </section>
 
+    <!-- SOLUTIONS & 4 CORE PRACTICE PILLARS SECTION (#services) -->
+    <section id="services" class="scroll-mt-28 py-20 lg:py-24 bg-[#faf7f5] border-t border-[#f3ece7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#6b2e1a]/10 text-[#6b2e1a] text-xs font-bold uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-[#e58339]"></span>
+                    <span>Practice Pillars &amp; Enterprise Solutions</span>
+                </div>
+                <h2 class="mt-3 font-brand text-3xl sm:text-4xl font-extrabold text-[#6b2e1a] tracking-tight">
+                    Full-Lifecycle Microsoft Power Platform, AI &amp; Data Architecture
+                </h2>
+                <p class="mt-3 text-[#2b1d18]/80 text-base leading-relaxed">
+                    From DoD Secret &amp; GCC High defense commands to Fortune 500 financial institutions, SDP Consulting LLC architects resilient solutions across four core engineering pillars.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-7">
+                <!-- Pillar 1 -->
+                <div class="bg-white rounded-2xl p-7 border border-[#f3ece7] shadow-sm card-lift flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#6b2e1a] text-[#e58339] flex items-center justify-center text-xl shadow mb-5">
+                            <i class="fa-solid fa-cubes"></i>
+                        </div>
+                        <h3 class="font-brand text-xl font-bold text-[#6b2e1a]">Power Platform &amp; Dynamics 365 Architecture</h3>
+                        <p class="mt-2.5 text-sm text-[#2b1d18]/80 leading-relaxed">
+                            End-to-end architecture and delivery of <strong>50+ production Model-Driven Apps, Canvas Apps, and Power Pages external portals</strong> backed by Dataverse security roles, Business Process Flows, and Azure DevOps ALM pipelines.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-xs text-[#2b1d18]/85">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>External stakeholder &amp; carrier portals via Power Pages</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>Custom Model-Driven pages &amp; Dataverse table modeling</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>GCC, GCC High &amp; Commercial multi-tenant ALM</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-[#f3ece7]">
+                        <button onclick="preselectScope('Power Platform & D365 Architecture'); navigateToSection('estimator');" class="text-xs font-bold text-[#e58339] hover:text-[#6b2e1a] transition-colors flex items-center">
+                            Configure Power Platform Scope <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-white rounded-2xl p-7 border border-[#f3ece7] shadow-sm card-lift flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#6b2e1a] text-[#e58339] flex items-center justify-center text-xl shadow mb-5">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="font-brand text-xl font-bold text-[#6b2e1a]">Copilot Studio AI, Gemini &amp; RPA Automation</h3>
+                        <p class="mt-2.5 text-sm text-[#2b1d18]/80 leading-relaxed">
+                            Intelligent process automation pairing <strong>Microsoft Copilot Studio &amp; Gemini AI agents</strong> with AI Builder document processing, Power Automate cloud flows, and Power Automate Desktop RPA bots.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-xs text-[#2b1d18]/85">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>Conversational Copilot Studio agents grounded in Dataverse/SPO</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>Unattended &amp; attended Power Automate Desktop RPA bots</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>Automated intake pipelines (100K+ MS websites automated)</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-[#f3ece7]">
+                        <button onclick="preselectScope('AI & Robotic Process Automation'); navigateToSection('estimator');" class="text-xs font-bold text-[#e58339] hover:text-[#6b2e1a] transition-colors flex items-center">
+                            Configure AI &amp; RPA Scope <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-white rounded-2xl p-7 border border-[#f3ece7] shadow-sm card-lift flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#6b2e1a] text-[#e58339] flex items-center justify-center text-xl shadow mb-5">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="font-brand text-xl font-bold text-[#6b2e1a]">Enterprise BI, Paginated Reports &amp; Databricks</h3>
+                        <p class="mt-2.5 text-sm text-[#2b1d18]/80 leading-relaxed">
+                            High-throughput lakehouse reporting centers and executive dashboards built with <strong>Power BI, Power BI Paginated Reports, Azure Databricks, and Azure Data Factory</strong> for federal actuaries, DoD procurement, and global operations.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-xs text-[#2b1d18]/85">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>Pixel-perfect DoD Procurement Paginated Reports</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>Databricks &amp; Azure Data Factory actuarial analytics</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>Dynamic Power BI licensing &amp; embedded custom page visuals</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-[#f3ece7]">
+                        <button onclick="preselectScope('Enterprise BI & Data Engineering'); navigateToSection('estimator');" class="text-xs font-bold text-[#e58339] hover:text-[#6b2e1a] transition-colors flex items-center">
+                            Configure BI &amp; Databricks Scope <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-white rounded-2xl p-7 border border-[#f3ece7] shadow-sm card-lift flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-[#6b2e1a] text-[#e58339] flex items-center justify-center text-xl shadow mb-5">
+                            <i class="fa-solid fa-sitemap"></i>
+                        </div>
+                        <h3 class="font-brand text-xl font-bold text-[#6b2e1a]">CoE Governance &amp; SharePoint Modernization</h3>
+                        <p class="mt-2.5 text-sm text-[#2b1d18]/80 leading-relaxed">
+                            Enterprise <strong>Power Platform Center of Excellence (CoE)</strong> rollouts, DLP policy design, maker enablement curricula, and legacy SharePoint On-Premise / Nintex / InfoPath migrations to SharePoint Online and Dataverse.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-xs text-[#2b1d18]/85">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>CoE Starter Kit telemetry, DLP guardrails &amp; environment routing</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>Legacy SharePoint, Nintex &amp; PowerShell workflow replacement</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-[#e58339] mr-2"></i>Executive &amp; citizen-developer training programs</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-[#f3ece7]">
+                        <button onclick="preselectScope('CoE Governance & SharePoint Migration'); navigateToSection('estimator');" class="text-xs font-bold text-[#e58339] hover:text-[#6b2e1a] transition-colors flex items-center">
+                            Configure CoE &amp; Migration Scope <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES & CLIENT IMPACT SECTION (#impact) -->
+    <section id="impact" class="scroll-mt-28 py-20 lg:py-24 bg-[#6b2e1a] text-white border-t-4 border-[#e58339]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-white/15">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#3d190d] border border-[#e58339]/50 text-[#f5b482] text-xs font-bold uppercase tracking-wider">
+                        <span>Proven Mission &amp; Enterprise Delivery</span>
+                    </div>
+                    <h2 class="mt-3 font-brand text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                        Defense, Federal &amp; Fortune 500 Case Studies
+                    </h2>
+                    <p class="mt-2 text-white/85 text-base">
+                        Selected engagements across DoD commands, federal civilian agencies, financial services, healthcare, and global manufacturing.
+                    </p>
+                </div>
+
+                <!-- Portfolio Filter Pills -->
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterPortfolio('all')" data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold bg-[#e58339] text-white shadow transition-all">
+                        All Sectors (9)
+                    </button>
+                    <button onclick="filterPortfolio('defense')" data-filter="defense" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-[#3d190d] text-white/90 hover:bg-[#542313] border border-[#e58339]/35 transition-all">
+                        Defense &amp; Federal
+                    </button>
+                    <button onclick="filterPortfolio('finance')" data-filter="finance" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-[#3d190d] text-white/90 hover:bg-[#542313] border border-[#e58339]/35 transition-all">
+                        Financial &amp; Insurance
+                    </button>
+                    <button onclick="filterPortfolio('enterprise')" data-filter="enterprise" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-[#3d190d] text-white/90 hover:bg-[#542313] border border-[#e58339]/35 transition-all">
+                        Enterprise &amp; Industrial
+                    </button>
+                </div>
+            </div>
+
+            <!-- Case Studies Grid -->
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Case 1: U.S. Navy JAG & PACOMM -->
+                <div class="portfolio-card bg-[#3d190d]/90 rounded-2xl p-6 border-2 border-[#e58339]/60 shadow-xl card-lift flex flex-col justify-between" data-category="defense">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-3">
+                            <span class="px-2.5 py-1 rounded-md font-bold bg-[#e58339] text-white">DoD Secret Clearance</span>
+                            <span class="text-[#f5b482] font-mono">2026 – Present</span>
+                        </div>
+                        <h3 class="font-brand text-lg font-bold text-white">U.S. Navy JAG Office &amp; PACOMM / Pacific Fleet</h3>
+                        <p class="mt-2.5 text-xs sm:text-sm text-white/85 leading-relaxed">
+                            Architected Model-Driven Power Apps, Power Pages portals, Procurement Paginated Reports, custom model-driven reporting pages, and dynamic Power BI licensing workflows under an Active DoD Secret Clearance.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-1.5 text-[11px] font-mono text-[#f5b482]">
+                        <span>#ModelDrivenApps</span>
+                        <span>#PowerPages</span>
+                        <span>#PaginatedReports</span>
+                    </div>
+                </div>
+
+                <!-- Case 2: Office of Personnel Management (OPM) -->
+                <div class="portfolio-card bg-[#3d190d]/85 rounded-2xl p-6 border border-white/15 shadow-lg card-lift flex flex-col justify-between" data-category="defense">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-3">
+                            <span class="px-2.5 py-1 rounded-md font-bold bg-[#6b2e1a] text-[#f5b482] border border-[#e58339]/40">Federal Civilian</span>
+                            <span class="text-white/65 font-mono">OPM Contract</span>
+                        </div>
+                        <h3 class="font-brand text-lg font-bold text-white">U.S. Office of Personnel Management (OPM)</h3>
+                        <p class="mt-2.5 text-xs sm:text-sm text-white/85 leading-relaxed">
+                            Built Model-Driven Apps and external Power Pages portals enabling federal health insurance carriers to expedite contract negotiations, paired with a Databricks, Azure Data Factory &amp; Power BI actuarial reporting center.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-1.5 text-[11px] font-mono text-[#f5b482]">
+                        <span>#Databricks</span>
+                        <span>#PowerPages</span>
+                        <span>#AzureDataFactory</span>
+                    </div>
+                </div>
+
+                <!-- Case 3: National Education Association (NEA) -->
+                <div class="portfolio-card bg-[#3d190d]/85 rounded-2xl p-6 border border-white/15 shadow-lg card-lift flex flex-col justify-between" data-category="defense">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-3">
+                            <span class="px-2.5 py-1 rounded-md font-bold bg-[#6b2e1a] text-[#f5b482] border border-[#e58339]/40">National Institution</span>
+                            <span class="text-white/65 font-mono">Higher Ed BI</span>
+                        </div>
+                        <h3 class="font-brand text-lg font-bold text-white">National Education Association (NEA)</h3>
+                        <p class="mt-2.5 text-xs sm:text-sm text-white/85 leading-relaxed">
+                            Designed interactive Power BI analytics models detailing college and university financial data nationwide, equipping leadership and researchers with granular institutional benchmarking.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-1.5 text-[11px] font-mono text-[#f5b482]">
+                        <span>#PowerBI</span>
+                        <span>#FinancialAnalytics</span>
+                        <span>#DataModeling</span>
+                    </div>
+                </div>
+
+                <!-- Case 4: TIAA -->
+                <div class="portfolio-card bg-[#3d190d]/85 rounded-2xl p-6 border border-white/15 shadow-lg card-lift flex flex-col justify-between" data-category="finance">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-3">
+                            <span class="px-2.5 py-1 rounded-md font-bold bg-[#6b2e1a] text-[#f5b482] border border-[#e58339]/40">Financial Services</span>
+                            <span class="text-white/65 font-mono">Enterprise CoE</span>
+                        </div>
+                        <h3 class="font-brand text-lg font-bold text-white">TIAA — Power Platform CoE &amp; Governance</h3>
+                        <p class="mt-2.5 text-xs sm:text-sm text-white/85 leading-relaxed">
+                            Rolled out enterprise Power Platform Governance, Education, and Center of Excellence architecture backed by Dataverse and SharePoint Online, complete with Power BI adoption telemetry and maker training curricula.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-1.5 text-[11px] font-mono text-[#f5b482]">
+                        <span>#CoEStarterKit</span>
+                        <span>#Dataverse</span>
+                        <span>#Governance</span>
+                    </div>
+                </div>
+
+                <!-- Case 5: JP Morgan Chase & BMO Harris -->
+                <div class="portfolio-card bg-[#3d190d]/85 rounded-2xl p-6 border border-white/15 shadow-lg card-lift flex flex-col justify-between" data-category="finance">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-3">
+                            <span class="px-2.5 py-1 rounded-md font-bold bg-[#6b2e1a] text-[#f5b482] border border-[#e58339]/40">Commercial Banking</span>
+                            <span class="text-white/65 font-mono">Risk &amp; Audit</span>
+                        </div>
+                        <h3 class="font-brand text-lg font-bold text-white">JP Morgan Chase &amp; BMO Harris Bank</h3>
+                        <p class="mt-2.5 text-xs sm:text-sm text-white/85 leading-relaxed">
+                            Delivered Voice of Client, KYCO Audit Executive Review, and Project Governance Toolkits for JP Morgan Chase Commercial Banking; led North American Operations Risk &amp; Compliance Process Catalogs at BMO Harris.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-1.5 text-[11px] font-mono text-[#f5b482]">
+                        <span>#AuditGovernance</span>
+                        <span>#SharePoint</span>
+                        <span>#RiskCompliance</span>
+                    </div>
+                </div>
+
+                <!-- Case 6: Aon & Unite Here Health -->
+                <div class="portfolio-card bg-[#3d190d]/85 rounded-2xl p-6 border border-white/15 shadow-lg card-lift flex flex-col justify-between" data-category="finance">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-3">
+                            <span class="px-2.5 py-1 rounded-md font-bold bg-[#6b2e1a] text-[#f5b482] border border-[#e58339]/40">Insurance &amp; Healthcare</span>
+                            <span class="text-white/65 font-mono">RPA Automation</span>
+                        </div>
+                        <h3 class="font-brand text-lg font-bold text-white">Aon Insurance &amp; Unite Here Health</h3>
+                        <p class="mt-2.5 text-xs sm:text-sm text-white/85 leading-relaxed">
+                            Built a custom RPA CoE SharePoint hub streamlining international financial transactions at Aon; engineered Power Automate Desktop RPA bots automating mandatory document issuance at Unite Here Health.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-1.5 text-[11px] font-mono text-[#f5b482]">
+                        <span>#PowerAutomateDesktop</span>
+                        <span>#RPACoE</span>
+                        <span>#HealthcareOps</span>
+                    </div>
+                </div>
+
+                <!-- Case 7: Microsoft / RedCloud Intake Automation -->
+                <div class="portfolio-card bg-[#3d190d]/85 rounded-2xl p-6 border border-white/15 shadow-lg card-lift flex flex-col justify-between" data-category="enterprise">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-3">
+                            <span class="px-2.5 py-1 rounded-md font-bold bg-[#6b2e1a] text-[#f5b482] border border-[#e58339]/40">Enterprise Tech</span>
+                            <span class="text-white/65 font-mono">100K+ Sites</span>
+                        </div>
+                        <h3 class="font-brand text-lg font-bold text-white">Microsoft Web Estate Automation (RedCloud)</h3>
+                        <p class="mt-2.5 text-xs sm:text-sm text-white/85 leading-relaxed">
+                            Engineered Azure DevOps and Power Automate orchestration workflows automating the intake, provisioning, and lifecycle governance of over 100,000 Microsoft web properties.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-1.5 text-[11px] font-mono text-[#f5b482]">
+                        <span>#AzureDevOps</span>
+                        <span>#PowerAutomate</span>
+                        <span>#ScaleAutomation</span>
+                    </div>
+                </div>
+
+                <!-- Case 8: Continental Oil & Gas & Arkema -->
+                <div class="portfolio-card bg-[#3d190d]/85 rounded-2xl p-6 border border-white/15 shadow-lg card-lift flex flex-col justify-between" data-category="enterprise">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-3">
+                            <span class="px-2.5 py-1 rounded-md font-bold bg-[#6b2e1a] text-[#f5b482] border border-[#e58339]/40">Energy &amp; Chemicals</span>
+                            <span class="text-white/65 font-mono">Cloud Migration</span>
+                        </div>
+                        <h3 class="font-brand text-lg font-bold text-white">Continental Oil &amp; Gas &amp; Arkema Chemicals</h3>
+                        <p class="mt-2.5 text-xs sm:text-sm text-white/85 leading-relaxed">
+                            Migrated SharePoint On-Premise to SharePoint Online at Continental Oil &amp; Gas, replacing Nintex &amp; PowerShell scripts with Power Apps; built manufacturing, fleet &amp; safety Power BI suites at Arkema.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-1.5 text-[11px] font-mono text-[#f5b482]">
+                        <span>#NintexMigration</span>
+                        <span>#PowerBI</span>
+                        <span>#SafetyTelemetry</span>
+                    </div>
+                </div>
+
+                <!-- Case 9: Canfor, Grainger & OfficeMax -->
+                <div class="portfolio-card bg-[#3d190d]/85 rounded-2xl p-6 border border-white/15 shadow-lg card-lift flex flex-col justify-between" data-category="enterprise">
+                    <div>
+                        <div class="flex items-center justify-between text-xs mb-3">
+                            <span class="px-2.5 py-1 rounded-md font-bold bg-[#6b2e1a] text-[#f5b482] border border-[#e58339]/40">Supply Chain &amp; Retail</span>
+                            <span class="text-white/65 font-mono">Enterprise BPM</span>
+                        </div>
+                        <h3 class="font-brand text-lg font-bold text-white">Canfor, Grainger &amp; OfficeMax BPM CoE</h3>
+                        <p class="mt-2.5 text-xs sm:text-sm text-white/85 leading-relaxed">
+                            Integrated Dataverse, SharePoint Online &amp; Azure Applied Insights at Canfor; built QBR/KPI marketplace portals at Grainger; led the 400+ site SharePoint BPM Center of Excellence at OfficeMax.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-1.5 text-[11px] font-mono text-[#f5b482]">
+                        <span>#Dataverse</span>
+                        <span>#QBRDashboards</span>
+                        <span>#BPMCoE</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECURITY CLEARANCE, CERTIFICATIONS & ACADEMIC CREDENTIALS (#credentials) -->
+    <section id="credentials" class="scroll-mt-28 py-20 lg:py-24 bg-[#faf7f5] border-t border-[#f3ece7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#6b2e1a]/10 text-[#6b2e1a] text-xs font-bold uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-[#e58339]"></span>
+                    <span>Vetted Security &amp; Technical Credentials</span>
+                </div>
+                <h2 class="mt-3 font-brand text-3xl sm:text-4xl font-extrabold text-[#6b2e1a] tracking-tight">
+                    Active DoD Secret Clearance &amp; 15 Microsoft Accreditations
+                </h2>
+                <p class="mt-3 text-[#2b1d18]/80 text-base">
+                    Cleared for sensitive Defense and Federal engagements, backed by deep Microsoft Power Platform certifications, Python/AI specializations, and dual-discipline academic degrees.
+                </p>
+            </div>
+
+            <!-- Featured Clearance & Education Row -->
+            <div class="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Active DoD Secret Clearance Card -->
+                <div class="lg:col-span-7 bg-[#6b2e1a] text-white rounded-2xl p-7 border-2 border-[#e58339] shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full bg-[#e58339] text-white text-xs font-bold uppercase tracking-wider">
+                                <i class="fa-solid fa-shield-halved mr-1.5"></i>Active Federal Security Clearance
+                            </span>
+                            <span class="font-mono text-xs text-[#f5b482] font-bold">VERIFIED • ACTIVE</span>
+                        </div>
+                        <h3 class="font-brand text-2xl font-extrabold text-white">
+                            U.S. Department of Defense (DoD) Secret Clearance
+                        </h3>
+                        <p class="mt-3 text-sm text-white/90 leading-relaxed">
+                            Upgraded from an active <strong>Federal Public Trust Clearance</strong> (held during the U.S. Office of Personnel Management contract) to an <strong>Active DoD Secret Clearance</strong> supporting the <strong>U.S. Navy JAG Office</strong> and <strong>PACOMM / U.S. Pacific Fleet Command</strong>.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                        <div class="p-3 rounded-xl bg-[#3d190d]/80 border border-white/10">
+                            <div class="text-[#f5b482] font-bold">Current Level</div>
+                            <div class="text-white mt-0.5">DoD Secret (Active)</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#3d190d]/80 border border-white/10">
+                            <div class="text-[#f5b482] font-bold">Defense Commands</div>
+                            <div class="text-white mt-0.5">U.S. Navy JAG &amp; PACOMM</div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-[#3d190d]/80 border border-white/10">
+                            <div class="text-[#f5b482] font-bold">Prior Clearance</div>
+                            <div class="text-white mt-0.5">OPM Public Trust</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Degrees & AI Specializations -->
+                <div class="lg:col-span-5 bg-white rounded-2xl p-7 border border-[#f3ece7] shadow-sm flex flex-col justify-between space-y-5">
+                    <div>
+                        <h3 class="font-brand text-lg font-bold text-[#6b2e1a] flex items-center">
+                            <i class="fa-solid fa-graduation-cap text-[#e58339] mr-2.5"></i>Academic Degrees
+                        </h3>
+                        <div class="mt-3 space-y-3 text-xs">
+                            <div class="p-3.5 rounded-xl bg-[#faf7f5] border border-[#f3ece7]">
+                                <div class="font-bold text-[#6b2e1a] text-sm">M.S. in Education Media Design &amp; Technology</div>
+                                <div class="text-[#2b1d18]/75 mt-0.5">Full Sail University • Winter Park, FL</div>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-[#faf7f5] border border-[#f3ece7]">
+                                <div class="font-bold text-[#6b2e1a] text-sm">B.S. Double Major: Chemistry &amp; Business Administration</div>
+                                <div class="text-[#2b1d18]/75 mt-0.5">Elmhurst College • Elmhurst, IL</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-brand text-lg font-bold text-[#6b2e1a] flex items-center">
+                            <i class="fa-solid fa-microchip text-[#e58339] mr-2.5"></i>Continuing AI &amp; Data Science Credentials
+                        </h3>
+                        <div class="mt-2.5 flex flex-wrap gap-2 text-xs">
+                            <span class="px-3 py-1.5 rounded-lg bg-[#6b2e1a]/10 text-[#6b2e1a] font-semibold">MS AI: Python for AI</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-[#6b2e1a]/10 text-[#6b2e1a] font-semibold">Applied Data Science with Python</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-[#6b2e1a]/10 text-[#6b2e1a] font-semibold">Machine Learning using Python</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-[#6b2e1a]/10 text-[#6b2e1a] font-semibold">Deep Learning Specialization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15 Microsoft Power Platform & Dynamics 365 Accreditations Grid -->
+            <div class="mt-8 bg-white rounded-2xl p-6 sm:p-8 border border-[#f3ece7] shadow-sm">
+                <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-5 border-b border-[#f3ece7]">
+                    <h3 class="font-brand text-lg sm:text-xl font-bold text-[#6b2e1a] flex items-center">
+                        <i class="fa-brands fa-microsoft text-[#e58339] mr-2.5"></i>Microsoft Power Platform &amp; Dynamics 365 Accreditations (15)
+                    </h3>
+                    <span class="text-xs font-mono font-semibold text-[#6b2e1a] bg-[#faf7f5] px-3 py-1 rounded-lg border border-[#f3ece7]">Verified Microsoft Credentials</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-medium text-[#2b1d18]">
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Microsoft Certified: Dynamics 365 Fundamentals</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Platform: Copilot Studio</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Platform and Copilot Studio</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Platform: AI Builder</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Platform: Power Pages</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Platform: ALM with Dataverse</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Platform: Governance with CoE</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Extending Power Platform with CoE</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Model-Driven Apps &amp; Dataverse Administration</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Platform: Model-Driven Apps for Admins</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Platform: Advanced Canvas App Development</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Platform for Administrators</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Intro to Power Apps &amp; Power Automate for Dataverse</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Automate: Power User</div>
+                    <div class="p-3 rounded-xl bg-[#faf7f5] border border-[#f3ece7] flex items-center"><i class="fa-solid fa-certificate text-[#e58339] mr-2.5 shrink-0"></i>Power Apps for Power User</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- INSIGHTS & ENGINEERING BLOG SECTION (Light Alabaster Theme with assets/noBgColor.png) -->
-    <section id="blog" class="py-20 lg:py-24 bg-[#faf7f5] border-t border-[#f3ece7]">
+    <section id="blog" class="scroll-mt-28 py-20 lg:py-24 bg-[#faf7f5] border-t border-[#f3ece7]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Blog Header with Full-Color Brand Logo Lockup (assets/noBgColor.png) -->
             <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-[#f3ece7]">
@@ -605,9 +1039,9 @@
         </div>
     </section>
 
-    <!-- INTERACTIVE FEDERAL & ENTERPRISE PROJECT SCOPE & ROI ESTIMATOR -->
-    <section id="estimator" class="py-20 lg:py-24 bg-[#3d190d] text-white relative overflow-hidden border-t-4 border-[#e58339]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- INTERACTIVE FEDERAL & ENTERPRISE PROJECT SCOPE & ROI ESTIMATOR & DISCOVERY CALL (#estimator & #contact) -->
+    <section id="estimator" class="scroll-mt-28 py-20 lg:py-24 bg-[#3d190d] text-white relative overflow-hidden border-t-4 border-[#e58339]">
+        <div id="contact" class="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 
                 <!-- Left 5 Cols: Direct Principal Contact -->
@@ -814,8 +1248,8 @@
         </div>
     </section>
 
-    <!-- PRINCIPAL BIO & CAREER TIMELINE -->
-    <section id="about" class="py-20 lg:py-24 bg-[#faf7f5] border-t border-[#f3ece7]">
+    <!-- PRINCIPAL BIO & CAREER TIMELINE (#about) -->
+    <section id="about" class="scroll-mt-28 py-20 lg:py-24 bg-[#faf7f5] border-t border-[#f3ece7]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 
@@ -976,10 +1410,11 @@
             <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-white/65">
                 <div>© 2026 SDP Consulting LLC • Scott D. Priebe, Principal • Active DoD Secret Clearance</div>
                 <div class="flex flex-wrap items-center gap-4 text-xs">
-                    <a href="#services" class="hover:text-[#e58339] transition-colors">Practice Pillars</a>
-                    <a href="#impact" class="hover:text-[#e58339] transition-colors">Case Studies</a>
-                    <a href="#blog" class="text-[#e58339] font-semibold hover:underline">Insights &amp; Blog</a>
-                    <a href="#estimator" class="hover:text-[#e58339] transition-colors">Book Discovery Call</a>
+                    <a href="#services" onclick="return navigateToSection('services', event)" class="hover:text-[#e58339] transition-colors">Solutions</a>
+                    <a href="#impact" onclick="return navigateToSection('impact', event)" class="hover:text-[#e58339] transition-colors">Case Studies</a>
+                    <a href="#credentials" onclick="return navigateToSection('credentials', event)" class="hover:text-[#e58339] transition-colors">Clearance</a>
+                    <a href="#blog" onclick="return navigateToSection('blog', event)" class="text-[#e58339] font-semibold hover:underline">Insights &amp; Blog</a>
+                    <a href="#contact" onclick="return navigateToSection('contact', event)" class="hover:text-[#e58339] transition-colors">Book Discovery Call</a>
                 </div>
             </div>
         </div>
@@ -1010,7 +1445,7 @@
 
             <div class="mt-8 pt-5 border-t border-[#f3ece7] flex flex-wrap items-center justify-between gap-4">
                 <span class="text-xs font-semibold text-[#6b2e1a]">Need architecture guidance on this topic?</span>
-                <a href="#estimator" onclick="closeBlogModal()" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#e58339] hover:bg-[#f09248] text-white shadow transition-all">
+                <a href="#contact" onclick="closeBlogModal(); return navigateToSection('contact', event);" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#e58339] hover:bg-[#f09248] text-white shadow transition-all">
                     Request a Technical Briefing →
                 </a>
             </div>
@@ -1019,6 +1454,29 @@
 
     <!-- APPLICATION SCRIPTS -->
     <script>
+        // Universal Smooth Anchor Navigation Handler with Sticky Header Offset
+        function navigateToSection(sectionId, event) {
+            if (event) {
+                event.preventDefault();
+            }
+            const target = document.getElementById(sectionId);
+            if (!target) return false;
+
+            const headerOffset = 116; // Top clearance bar + sticky navbar height
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: Math.max(0, offsetPosition),
+                behavior: 'smooth'
+            });
+
+            if (history.pushState) {
+                history.pushState(null, '', '#' + sectionId);
+            }
+            return false;
+        }
+
         // Toggle Mobile Navigation Menu
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
